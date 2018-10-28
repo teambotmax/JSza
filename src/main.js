@@ -9,8 +9,8 @@ const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
 
-const myBot = ['ub126c53031b74c56f8379738707c2851'];
-const admin = ['ub126c53031b74c56f8379738707c2851'];
+const myBot = ['u4862fe4b182b2fd194a3108e2f3662e8'];
+const admin = ['u4862fe4b182b2fd194a3108e2f3662e8'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
@@ -58,16 +58,16 @@ class LINE extends LineAPI {
 		this.limitposts = limitposts; //Output timeline post
         this.receiverID = '';
         this.stateStatus = {
-			autojoin: 0, //0 = No, 1 = Yes
+			autojoin: 1, //0 = No, 1 = Yes
             cancel: 0, //0 = Auto cancel off, 1 = on
-            kick: 0, //1 = Yes, 0 = No
+            kick: 1, //1 = Yes, 0 = No
 			mute: 0, //1 = Mute, 0 = Unmute
 			protect: 0, //Protect Qr,Kicker
 			qr: 0, //0 = Gk boleh, 1 = Boleh
-			salam: 0 //1 = Yes, 0 = No
+			salam: 1 //1 = Yes, 0 = No
         }
                 this.jphelp = "\n\
-# キーワード一覧\n\
+# SELFBOT-BY:MAX\n\
 => help jp\n\
 詳細コマンド日本語版\n\
 >-->>Group<<--<\n\
@@ -75,7 +75,7 @@ class LINE extends LineAPI {
 => ginfo：グル情報を取得します\n\
 => tagall：メンバー全員をメンションします\n\
 => cancel：招待中をキャンセルします\n\
-=> kickall：メンバー全員を強制退出させます\n\
+=> BY MAX：คำสั่งบิน\n\
 => left：グループから退出します\n\
 => gurl：リンク/QRコードを更新後、それを使用した招待を許可します\n\
 => ourl：リンク/QRコードを使用した招待を許可します\n\
@@ -107,8 +107,8 @@ class LINE extends LineAPI {
 => youtube：YoutubeLinkからダウンロードリンクに変換します\n\
 ===============\n\
 # CreatorBot:\n\
-line://ti/p/4SlGRqnWpE\n\
-by.Seiji@KnF";
+line://ti/p/~max_pv\n\
+BY: SELFBOT-BY:MAX";
         var that = this;
 
 		this.sthelp = "\n\
@@ -131,8 +131,8 @@ by.Seiji@KnF";
 グル参加、友達追加自動挨拶\n\
 ===============\n\
 # CreatorBot:\n\
-line://ti/p/4SlGRqnWpE\n\
-by.Seiji@KnF";
+line://ti/p/~max_pv\n\
+BY: SELFBOT-BY:MAX";
         var that = this;
 
 		this.keyhelp = "\n\
@@ -179,8 +179,8 @@ by.Seiji@KnF";
 => youtube\n\
 ===============\n\
 # CreatorBot:\n\
-line://ti/p/4SlGRqnWpE\n\
-by.Seiji@KnF";
+line://ti/p/~max_pv\n\
+BY: SELFBOT-BY:MAX";
         var that = this;
     }
 
@@ -214,7 +214,7 @@ by.Seiji@KnF";
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "自動参加です！\nよろしく！\nKnFSystem...";
+			halo.text = "BY MAX";
 			this._client.sendMessage(0, halo);
 		}
 		
@@ -1334,7 +1334,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'kickall' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'by max' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
