@@ -9,8 +9,8 @@ const config = require('./config');
 const { Message, OpType, Location } = require('../curve-thrift/line_types');
 //let exec = require('child_process').exec;
 
-const myBot = ['u4862fe4b182b2fd194a3108e2f3662e8'];
-const admin = ['u4862fe4b182b2fd194a3108e2f3662e8'];
+const myBot = ['u954d9f74bc255dad64dc89bf1601469c'];
+const admin = ['u954d9f74bc255dad64dc89bf1601469c'];
 const banList = [];//Banned list
 var groupList = new Array();//Group list
 var vx = {};var midnornama,pesane,kickhim;var waitMsg = "no";//DO NOT CHANGE THIS
@@ -67,118 +67,103 @@ class LINE extends LineAPI {
 			salam: 1 //1 = Yes, 0 = No
         }
                 this.jphelp = "\n\
-# SELFBOT-BY:MAX\n\
-=> help jp\n\
-詳細コマンド日本語版\n\
->-->>Group<<--<\n\
-グループ保護系コマンド\n\
-=> ginfo：グル情報を取得します\n\
-=> tagall：メンバー全員をメンションします\n\
-=> cancel：招待中をキャンセルします\n\
-=> BY MAX：คำสั่งบิน\n\
-=> left：グループから退出します\n\
-=> gurl：リンク/QRコードを更新後、それを使用した招待を許可します\n\
-=> ourl：リンク/QRコードを使用した招待を許可します\n\
-=> curl：リンク/QRコードを使用した招待をブロックします\n\
-※上記のコマンドはグループトークのみ使用できます\n\
->-->>Self<<--<\n\
-便利系コマンド\n\
-=> addcontact：メンション/mid/連絡先から友達追加します\n\
-=> adminutil：権限管理システムを起動します\n\
-=> grouputil：グル管理システムを起動します\n\
-=> ban：ブラックリストに追加します\n\
-=> unban：ブラックリストから削除します\n\
-=> botcontact：自分の追加URL/IDを表示します\n\
-=> botleft：\n\
-=> broadcast：\n\
-=> cekid：メンション/連絡先からidを取得します\n\
-=> kepo：メンション/id/連絡先からプロフを取得します\n\
-=> sendcontact：メンション/idから連絡先を取得します\n\
-=> msg：メンション/id/連絡先からメッセージを送信します\n\
-=> mute：コマンドに反応しなくします\n\
-=> unmute：コマンドに反応するようにします\n\
-=> myid：自分のidを取得します\n\
-=> refresh：全てのトーク履歴を削除します\n\
-=> speed|sp|.sp：処理速度を計測します\n\
-=> test：動作状況確認をします\n\
-=> tts：ボイスメモを作成します\n\
-=> now：グリニッジ時刻を取得します\n\
-=> gift：プレゼントを送ります\n\
-=> youtube：YoutubeLinkからダウンロードリンクに変換します\n\
+   KeywordList\n\
+• > help jp\n\
+>-- Group --<\n\
+• > maxkick：คำสั่งบิน\n\
+• > ginfo：グル情報を取得します\n\
+• > tagall：メンバー全員をメンションします\n\
+• > cancel：招待中をキャンセルします\n\
+• > left：グループから退出します\n\
+• > gurl：リンク/QRコードを更新後、それを使用した招待を許可します\n\
+• > ourl：リンク/QRコードを使用した招待を許可します\n\
+• > curl：リンク/QRコードを使用した招待をブロックします\n\
+>-- Self --<\n\
+• > addcontact：メンション/mid/連絡先から友達追加します\n\
+• > adminutil：権限管理システムを起動します\n\
+• > grouputil：グル管理システムを起動します\n\
+• > ban：ブラックリストに追加します\n\
+• > unban：ブラックリストから削除します\n\
+• > botcontact：自分の追加URL/IDを表示します\n\
+• > botleft：\n\
+• > broadcast：\n\
+• > cekid：メンション/連絡先からidを取得します\n\
+• > kepo：メンション/id/連絡先からプロフを取得します\n\
+• > sendcontact：メンション/idから連絡先を取得します\n\
+• > msg：メンション/id/連絡先からメッセージを送信します\n\
+• > mute：コマンドに反応しなくします\n\
+• > unmute：コマンドに反応するようにします\n\
+• > myid：自分のidを取得します\n\
+• > refresh：全てのトーク履歴を削除します\n\
+• > speed|sp|.sp：処理速度を計測します\n\
+• > test：動作状況確認をします\n\
+• > tts：ボイスメモを作成します\n\
+• > now：グリニッジ時刻を取得します\n\
+• > gift：プレゼントを送ります\n\
+• > youtube：YoutubeLinkからダウンロードリンクに変換します\n\
 ===============\n\
-# CreatorBot:\n\
+   CreatorBot:\n\
 line://ti/p/~max_pv\n\
 BY: SELFBOT-BY:MAX";
         var that = this;
 
 		this.sthelp = "\n\
-# KeywordList\n\
->-->>Setting<<--<\n\
-=> setting\n\
-設定状況確認\n\
-=> autojoin on/off\n\
-グル自動参加\n\
-=> cancel on/off\n\
-グル自動拒否\n\
-=> kick on/off\n\
-強制蹴り対象者自動招待\n\
-=> protect on/off\n\
-強制蹴り、招待URL保護\n\
-#onにするとkickも連動してonになります\n\
-=> qr on/off\n\
-?\n\
-=> salam on/off\n\
-グル参加、友達追加自動挨拶\n\
+   KeywordList\n\
+>-- Setting --<\n\
+• > setting\n\
+• > autojoin on/off\n\
+• > cancel on/off\n\
+• > kick on/off\n\
+• > protect on/off\n\
+• > qr on/off\n\
+• > salam on/off\n\
 ===============\n\
-# CreatorBot:\n\
+   CreatorBot:\n\
 line://ti/p/~max_pv\n\
 BY: SELFBOT-BY:MAX";
         var that = this;
 
 		this.keyhelp = "\n\
-# KeywordList\n\
->-->>Help<<--<\n\
-=> help\n\
-標準コマンドリスト\n\
-=> help jp\n\
-詳細コマンドリスト 日本語版\n\
-=> help st\n\
-コマンドリスト 機能設定\n\
->-->>Group<<--<\n\
-=> ginfo\n\
-=> tagall\n\
-=> cancel\n\
-=> kickall\n\
-=> left\n\
-=> gurl\n\
-=> ourl\n\
-=> curl\n\
->-->>Self<<--<\n\
-=> addcontact\n\
-=> adminutil\n\
-=> grouputil\n\
-=> ban\n\
-=> unban\n\
-=> banlist\n\
-=> botcontact\n\
-=> botleft\n\
-=> broadcast\n\
-=> cekid\n\
-=> kepo\n\
-=> sendcontact\n\
-=> msg\n\
-=> mute\n\
-=> unmute\n\
-=> myid\n\
-=> refresh\n\
-=> speed|sp|.sp\n\
-=> test\n\
-=> tts\n\
-=> now\n\
-=> gift\n\
-=> youtube\n\
+  KeywordList\n\
+>--- Help ---<\n\
+• > help\n\
+• > help jp\n\
+• > help st\n\
+>--- Group ---<\n\
+• > ginfo\n\
+• > tagall\n\
+• > cancel\n\
+• > maxkick\n\
+• > left\n\
+• > gurl\n\
+• > ourl\n\
+• > curl\n\
+>--- Self ---<\n\
+• > addcontact\n\
+• > adminutil\n\
+• > grouputil\n\
+• > ban\n\
+• > unban\n\
+• > banlist\n\
+• > botcontact\n\
+• > botleft\n\
+• > broadcast\n\
+• > cekid\n\
+• > kepo\n\
+• > sendcontact\n\
+• > msg\n\
+• > mute\n\
+• > unmute\n\
+• > myid\n\
+• > refresh\n\
+• > speed|sp|.sp\n\
+• > test\n\
+• > tts\n\
+• > now\n\
+• > gift\n\
+• > youtube\n\
 ===============\n\
-# CreatorBot:\n\
+   CreatorBot:\n\
 line://ti/p/~max_pv\n\
 BY: SELFBOT-BY:MAX";
         var that = this;
@@ -214,7 +199,7 @@ BY: SELFBOT-BY:MAX";
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "BY MAX";
+			halo.text = "กูมาร้าย กูไม่ได้มาดี 🕵";
 			this._client.sendMessage(0, halo);
 		}
 		
@@ -1334,7 +1319,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'by max' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'maxkick' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
