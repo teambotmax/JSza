@@ -67,7 +67,6 @@ class LINE extends LineAPI {
 			salam: 1 //1 = Yes, 0 = No
         }
                 this.jphelp = "🤖❂͜͡➣「 sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx 」\n\
-🤖❂͜͡➣ help jp\n\
 \n\
 🕵 Group 🕵\n\
 \n\
@@ -78,7 +77,7 @@ class LINE extends LineAPI {
 🤖❂͜͡➣ gurl：ลิ้งกลุ่ม\n\
 🤖❂͜͡➣ ourl：เปิดลิ้ง\n\
 🤖❂͜͡➣ curl：ปิดลิ้ง\n\
-🤖❂͜͡➣ left：\n\
+🤖❂͜͡➣ left\n\
 \n\
 🕵 Self 🕵\n\
 \n\
@@ -88,8 +87,8 @@ class LINE extends LineAPI {
 🤖❂͜͡➣ ban\n\
 🤖❂͜͡➣ unban\n\
 🤖❂͜͡➣ botcontact\n\
-🤖❂͜͡➣ botleft：\n\
-🤖❂͜͡➣ broadcast：\n\
+🤖❂͜͡➣ botleft\n\
+🤖❂͜͡➣ broadcast\n\
 🤖❂͜͡➣ cekid\n\
 🤖❂͜͡➣ kepo\n\
 🤖❂͜͡➣ sendcontact\n\
@@ -242,7 +241,7 @@ line://ti/p/~max_pv\n\
 		if(operation.type == 5 && this.stateStatus.salam == 1) {//someone adding me..
             let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "追加ありがとう！\nKnFSystem...";
+			halo.text = "มีอะไร...";
 			this._client.sendMessage(0, halo);
         }
 
