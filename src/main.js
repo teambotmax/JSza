@@ -70,7 +70,7 @@ class LINE extends LineAPI {
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ maxkick：คำสั่งบิน\n\
+🤖❂͜͡➣ กูจะบินเตรียมดิ้นได้เลย：คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -1327,7 +1327,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'maxkick' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'กูจะบินเตรียมดิ้นได้เลย' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
