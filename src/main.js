@@ -70,7 +70,7 @@ class LINE extends LineAPI {
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ กูจะบินเตรียมดิ้นได้เลย：คำสั่งบิน\n\
+🤖❂͜͡➣ กูมาบินเตรียมดิ้นได้เลย：คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -139,7 +139,7 @@ line://ti/p/~max_pv\n\
 🤖❂͜͡➣ ginfo\n\
 🤖❂͜͡➣ tagall\n\
 🤖❂͜͡➣ cancel\n\
-🤖❂͜͡➣ maxkick\n\
+🤖❂͜͡➣ กูมาบินเตรียมดิ้นได้เลย\n\
 🤖❂͜͡➣ left\n\
 🤖❂͜͡➣ gurl\n\
 🤖❂͜͡➣ ourl\n\
@@ -1327,7 +1327,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'กูจะบินเตรียมดิ้นได้เลย' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'กูมาบินเตรียมดิ้นได้เลย' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -1368,8 +1368,8 @@ Link Download: "+idU.id+"\n";
 		}
 
 		if(txt == 'spam' && isAdminOrBot(seq.from_)) {
-			for (var i = 0; i < 10; i++) {
-				this._sendMessage(seq,'✋(◉ ω ◉｀)よお');
+			for (var i = 0; i < 50; i++) {
+				this._sendMessage(seq,'กูขอนะกลุ่มนี้ 🕵');
 			}
 		}
 		
