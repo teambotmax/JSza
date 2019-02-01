@@ -70,7 +70,7 @@ class LINE extends LineAPI {
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ กูมาบินเตรียมดิ้นได้เลย：คำสั่งบิน\n\
+🤖❂͜͡➣ ᴍʏ ɴᴀᴍᴇs ᴍᴀx ʙʏ sᴇʟғʙᴏᴛ ʙʏ ᴍᴀx: คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -139,7 +139,6 @@ line://ti/p/~max_pv\n\
 🤖❂͜͡➣ ginfo\n\
 🤖❂͜͡➣ tagall\n\
 🤖❂͜͡➣ cancel\n\
-🤖❂͜͡➣ กูมาบินเตรียมดิ้นได้เลย\n\
 🤖❂͜͡➣ left\n\
 🤖❂͜͡➣ gurl\n\
 🤖❂͜͡➣ ourl\n\
