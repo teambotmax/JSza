@@ -1326,7 +1326,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'MAXKILL' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'maxkill' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
