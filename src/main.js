@@ -70,7 +70,7 @@ class LINE extends LineAPI {
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ ᴍʏ ɴᴀᴍᴇs ᴍᴀx ʙʏ sᴇʟғʙᴏᴛ ʙʏ ᴍᴀx: คำสั่งบิน\n\
+🤖❂͜͡➣ MAXKILL: คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -1326,7 +1326,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'ᴍʏ ɴᴀᴍᴇs ᴍᴀx ʙʏ sᴇʟғʙᴏᴛ ʙʏ ᴍᴀx' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'MAXKILL' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
