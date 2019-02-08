@@ -1326,7 +1326,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'บักอั๋น' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'กูบัคว่ะ' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
