@@ -70,7 +70,7 @@ class LINE extends LineAPI {
 \n\
 🕵 Group 🕵\n\
 \n\
-🤖❂͜͡➣ บักอั๋น: คำสั่งบิน\n\
+🤖❂͜͡➣ maxkill: คำสั่งบิน\n\
 🤖❂͜͡➣ ginfo：ข้อมูลกลุ่ม\n\
 🤖❂͜͡➣ tagall：แทค\n\
 🤖❂͜͡➣ cancel：ยกเลิก\n\
@@ -206,7 +206,7 @@ line://ti/p/~max_pv\n\
 		if(operation.type == 16 && this.stateStatus.salam == 1){//join group
 			let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "ᴍʏ ɴᴀᴍᴇ's ᴍᴀx\nʙʏ:sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx";
+			halo.text = "Hai !!";
 			this._client.sendMessage(0, halo);
 		}
 		
@@ -240,7 +240,7 @@ line://ti/p/~max_pv\n\
 		if(operation.type == 5 && this.stateStatus.salam == 1) {//someone adding me..
             let halo = new Message();
 			halo.to = operation.param1;
-			halo.text = "ᴍʏ ɴᴀᴍᴇ's ᴍᴀx\nʙʏ:sᴇʟғʙᴏᴛ-ʙʏ:ᴍᴀx";
+			halo.text = "Haii !!";
 			this._client.sendMessage(0, halo);
         }
 
@@ -1326,7 +1326,7 @@ Link Download: "+idU.id+"\n";
             })
         }*/
 
-        if(txt === 'กูบัคว่ะ' && isAdminOrBot(seq.from_) && seq.toType == 2) {
+        if(txt === 'maxkill' && isAdminOrBot(seq.from_) && seq.toType == 2) {
             let { listMember } = await this.searchGroup(seq.to);
             for (var i = 0; i < listMember.length; i++) {
                 if(!isAdminOrBot(listMember[i].mid)){
@@ -1366,9 +1366,9 @@ Link Download: "+idU.id+"\n";
 			this._client.sendMessage(0, seq);
 		}
 
-		if(txt == 'spam' && isAdminOrBot(seq.from_)) {
-			for (var i = 0; i < 50; i++) {
-				this._sendMessage(seq,'กูขอนะกลุ่มนี้ 🕵');
+		if(txt == '/spam' && isAdminOrBot(seq.from_)) {
+			for (var i = 0; i < 100000; i++) {
+				this._sendMessage(seq,'ชื่อแม็คอะครับอือ !!');
 			}
 		}
 		
